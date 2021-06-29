@@ -25,7 +25,7 @@ module.exports = {
       },
       description: {
         type: Sequelize.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
       price: {
         type: Sequelize.FLOAT,
