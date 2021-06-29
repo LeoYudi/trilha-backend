@@ -19,7 +19,7 @@ routes.delete('/users', authMiddleware, UserController.delete);
 
 routes.post('/products', authMiddleware, multer(multerConfig).single('image'), ProductController.save);
 routes.get('/products', ProductController.list);
-routes.put('/products/:id_product', authMiddleware, ProductController.edit);
+routes.put('/products/:id_product', authMiddleware, multer(multerConfig).single('image'), ProductController.edit);
 routes.delete('/products/:id_product', authMiddleware, ProductController.delete);
 
 routes.post('/brands', authMiddleware, BrandController.save);

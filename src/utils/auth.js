@@ -22,5 +22,5 @@ module.exports = {
     })
   ),
 
-  generateToken: (data = {}) => jwt.sign(data, 'c232864d5de2064450915c0b9e4cc0b5', { expiresIn: '7d' })
+  generateToken: (data = {}) => jwt.sign(data, process.env.SECRET, { expiresIn: '7d' })
 }
